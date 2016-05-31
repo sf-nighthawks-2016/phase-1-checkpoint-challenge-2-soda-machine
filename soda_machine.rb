@@ -11,10 +11,8 @@ class SodaMachine
   end
 
   def find_soda(soda_brand)
-    return sodas.find { |soda| soda.brand == soda.brand}
-    else
-        return nil if soda.brand == 'surge'
-       soda.brand
+    @sodas.find { |soda| soda.brand == soda_brand ? soda : nil}
+
   end
 
   def sell(soda_brand)
