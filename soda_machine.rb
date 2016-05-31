@@ -20,6 +20,15 @@ class SodaMachine
   end
 
   def sell(soda_brand)
+    if soda_brand != nil
+      @sodas.each do |soda|
+        if soda.brand == soda_brand
+          p "#{soda.brand} is my brand"
+            @sodas.delete(soda)
+        end
+      end
+    end
+    nil
   end
 
 end
