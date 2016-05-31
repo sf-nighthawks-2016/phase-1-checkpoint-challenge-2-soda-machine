@@ -1,3 +1,4 @@
+
 class Soda
   attr_reader :brand, :price
 
@@ -5,4 +6,5 @@ class Soda
     @brand = args[:brand]
     @price = args[:price]
   end
+
 end
