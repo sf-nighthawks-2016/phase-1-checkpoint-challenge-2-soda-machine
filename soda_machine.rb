@@ -1,3 +1,5 @@
+ require_relative 'soda'
+
 class SodaMachine
   attr_reader :sodas, :cash
 
