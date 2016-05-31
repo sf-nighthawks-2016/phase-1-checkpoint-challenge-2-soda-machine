@@ -25,7 +25,6 @@ class SodaMachine
     #machine and the price of the soda should be added
     #to machine cash.
     return nil if @sodas.empty?
-    soda = find_soda(soda_brand)
     @soda.delete
 
   end
