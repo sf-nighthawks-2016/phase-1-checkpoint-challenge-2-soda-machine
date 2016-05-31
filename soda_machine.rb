@@ -25,6 +25,13 @@ class SodaMachine
     end
   end
 
+  # After the challenge time slot...
+  # LESSON: Check Enumerable docs as well as Array!!!! I searched for #find!
+  # When this #find_soda is used all tests pass.
+  # def find_soda(soda_brand)
+  #   @sodas.find { |soda| soda.brand == soda_brand }
+  # end
+
 
   def sell(soda_brand)
     soda = find_soda(soda_brand)
