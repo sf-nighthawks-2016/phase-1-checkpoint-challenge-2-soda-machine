@@ -39,16 +39,16 @@ class SodaMachine
 
 end
 
-pepsi = Soda.new(brand: 'Pepsi', price: 0.65)
-coke_zero = Soda.new(brand: 'Coke Zero', price: 1.00)
-mountain_dew = Soda.new(brand: 'Mountain Dew', price: 0.75)
-pepsi = Soda.new(brand: 'Pepsi', price: 0.65)
+# pepsi = Soda.new(brand: 'Pepsi', price: 0.65)
+# coke_zero = Soda.new(brand: 'Coke Zero', price: 1.00)
+# mountain_dew = Soda.new(brand: 'Mountain Dew', price: 0.75)
+# pepsi = Soda.new(brand: 'Pepsi', price: 0.65)
 
-soda_machine = SodaMachine.new(sodas: [pepsi, coke_zero, mountain_dew, pepsi], cash: 1.00)
-p soda_machine.sodas
-p soda_machine.cash
-p soda_machine.sell('Pepsi')
-p soda_machine.find_soda('Pepsi')
+# soda_machine = SodaMachine.new(sodas: [pepsi, coke_zero, mountain_dew, pepsi], cash: 1.00)
+# p soda_machine.sodas
+# p soda_machine.cash
+# p soda_machine.sell('Pepsi')
+# p soda_machine.find_soda('Pepsi')
 # p soda_machine.cash
 
 
