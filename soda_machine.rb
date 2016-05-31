@@ -31,14 +31,15 @@ class SodaMachine
 
   def sell(soda_brand)
     i = @sodas.find_index do |soda|
-      soda.brand == soda_brand}
+      soda.brand == soda_brand
     end
 
     if i != nil
 
     @cash += sodas[i].price
     sodas.delete_at(i)
-  end
+
+   end
   end
 
 end

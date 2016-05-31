@@ -8,3 +8,9 @@ class Soda
     @price = args[:price]
   end
 end
+
+#vault = Soda.new(brand:'Vault',price:0.90)
+#
+#p vault.soda.brand
+#
+#p vault.price
