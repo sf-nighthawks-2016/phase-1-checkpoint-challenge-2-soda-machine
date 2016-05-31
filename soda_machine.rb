@@ -1,5 +1,3 @@
-require_relative "soda"
-
 class SodaMachine
   attr_reader :sodas, :cash
 
@@ -23,11 +21,18 @@ class SodaMachine
   end
 
   def sell(soda_brand)
+    if find_soda(soda_brand)
+      i = 0
+      @sodas.each do |soda|
+        i+=1
+        if soda.brand == soda_brand
+          @sodas.delete_at(i)
+        end
+      end
+    else
+      nil
+    end
   end
 
 end
-
-# drink = Soda.new(brand: 'Pepsi', price: 0.65)
-# machine = SodaMachine.new(sodas: [drink], cash: 1.00)
-# drink.sodas
 
