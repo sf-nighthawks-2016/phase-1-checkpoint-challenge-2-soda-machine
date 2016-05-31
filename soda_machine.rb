@@ -32,4 +32,5 @@ end
 
 # Biggest struggle is reading and interpreting the rpec tests.
 # If i was to build the class it would flow clearly but working backwards struggle
+# need help with rspec
 
