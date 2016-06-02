@@ -1,7 +1,7 @@
 require_relative "spec_helper"
 
 describe SodaMachine do
-  let (:pepsi) { Soda.new(brand: 'Pepsi', price: 0.65) }
+  let (:pepsi) { Soda.new(brand: 'Pepsi', price: 0.65) } # how come the :pepsi is a symbol? how come i can't emulate it in p ruby? What does :pepsi actually look like in if printed directly in ruby file?
   let (:mountain_dew) { Soda.new(brand: 'Mountain Dew', price: 0.75) }
   let (:coke_zero) { Soda.new(brand: 'Coke Zero', price: 1.00) }
   let (:second_pepsi) { Soda.new(brand: 'Pepsi', price: 0.65) }
