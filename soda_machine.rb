@@ -18,11 +18,12 @@ class SodaMachine
   def find_soda(soda_brand)
     @sodas.each do |soda|
       if soda.brand == soda_brand
+        p " !" * 90
         return soda
       else
-        return nil
       end
     end
+    return nil
   end
 
   # After the challenge time slot...
@@ -35,6 +36,7 @@ class SodaMachine
 
   def sell(soda_brand)
     soda = find_soda(soda_brand)
+
     if soda != nil
       sold_soda_index = @sodas.index(soda)
       @sodas.delete_at(sold_soda_index)
