@@ -12,47 +12,34 @@ class SodaMachine
   end
 
   def find_soda(soda_brand)
-    if @sodas.include?(soda_brand)
-      item = @sodas.index(soda_brand)
-      return @sodas[item]
-      else 
-        return nil
+   i = 0 
+   while i < sodas.length
+    if sodas[i].brand == soda_brand
+      return sodas[i]
     end
+    i += 1
+  end
+  return nil
   end
 
   def sell(soda_brand)
-  end
-
-  def current_inventory_count
-    # return the number of sodas it contains
-  end
-
-  def find_soda(brand)
-    # find a single soda with a given brand
-  end
-
-  def sell(brand)
-    # sell a soda with a given brand
-    # should be removed from the soda machine 
-    # the price of the soda should be added to the soda machine's cash
-    if @sodas.include?(brand)
-      item = @sodas.index(brand)
-      @cash += @sodas[item][price]
-      @sodas.delete(brand)
-    end
+      return nil if !sodas.map(&:brand).include?(soda_brand)
+      soda_to_sell = find_soda(soda_brand)
+      @cash += soda_to_sell.price
+      @sodas.delete(soda_to_sell)
   end
 
 end
 
+# driver code
+# pepsi = Soda.new(brand: 'Pepsi', price: 0.65)
+# mountain_dew = Soda.new(brand: 'Mountain Dew', price: 0.75)
+# coke_zero = Soda.new(brand: 'Coke Zero', price: 1.00) 
+# second_pepsi = Soda.new(brand: 'Pepsi', price: 0.65) 
 
-pepsi = Soda.new(brand: 'Pepsi', price: 0.65)
-mountain_dew = Soda.new(brand: 'Mountain Dew', price: 0.75)
-coke_zero = Soda.new(brand: 'Coke Zero', price: 1.00) 
-second_pepsi = Soda.new(brand: 'Pepsi', price: 0.65) 
+# soda_machine = SodaMachine.new(sodas: [pepsi, mountain_dew, coke_zero, second_pepsi], cash: 1.00)
 
-soda_machine = SodaMachine.new(sodas: [pepsi, mountain_dew, coke_zero, second_pepsi], cash: 1.00)
+# p soda_machine.sell("Pepsi")
 
-
-p soda_machine.current_inventory_count
 
 
